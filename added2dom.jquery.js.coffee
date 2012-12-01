@@ -1,15 +1,23 @@
+# Options:
+#   root: The root node in the dom to listen to, defaults to body
+#   poll: The interval to use when falling back to polling
+
 $ = jQuery
 
 $.fn.extend
-  added2dom: (callback) ->
+  added2dom: (callback, options={}) ->
+
+    defaults =
+      root: document.querySelector('body')
+      poll: 100
+
+    opts = _.extend(defaults, options)
 
     matches = @
 
     MutationObserver = window.MutationObserver ? 
                        window.WebKitMutationObserver ?
                        window.MozMutationObserver
-    
-    body = document.querySelector('body')
 
     if MutationObserver
       observer = new MutationObserver (mutations) ->
@@ -23,7 +31,7 @@ $.fn.extend
         matches = _.without(matches, matched...)
         @disconnect() unless matches.length
 
-      observer.observe body, 
+      observer.observe opts.root, 
         childList: true
         subtree:   true
 
@@ -32,11 +40,11 @@ $.fn.extend
       checkDomForElem = ->
         matched = []
         _.each matches, (match) ->
-          if $(body).find(match).length == 1
+          if $(opts.root).find(match).length == 1
             callback.apply(match)
             matched.push match
         matches = _.without(matches, matched...)
 
         if matches.length
-          setTimeout checkDomForElem, 100
+          setTimeout checkDomForElem, opts.poll
       checkDomForElem()
