@@ -22,7 +22,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Options:
-#   root: The root node in the dom to listen to, defaults to body
+#   root: The root node in the dom to listen to, defaults to document
 #   poll: The interval to use when falling back to polling
 
 $ = jQuery
@@ -31,7 +31,7 @@ $.fn.extend
   added2dom: (callback, options={}) ->
 
     defaults =
-      root: $('body')
+      root: document
       poll: 100
 
     opts = _.extend(defaults, options)

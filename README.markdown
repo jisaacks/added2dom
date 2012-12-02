@@ -30,7 +30,7 @@ You can set the root node and the interval when calling added2dom:
 $el.added2dom (->
   # run when added to dom
 ),
-  root: $("#main") # defaults to body
+  root: $("#main") # defaults to document
   poll: 5000       # defaults to 100
 ```
 
