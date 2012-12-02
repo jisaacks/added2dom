@@ -5,7 +5,7 @@ added2dom is a jquery plugin that executes a callback when the matched elements 
 ### Usage:
 
     $div = $('<div id="add_me">Here I am!</div>')
-    $div.add($div).added2dom ->
+    $div.added2dom ->
       # do something dom specific
     $("body").append($div)
 
