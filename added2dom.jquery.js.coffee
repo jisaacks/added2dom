@@ -31,7 +31,7 @@ $.fn.extend
                 callback.apply(match)
                 matched.push match
         matches = _.without(matches, matched...)
-        @disconnect() unless matches.length
+        @disconnect() unless matches.length > 0
 
       observer.observe opts.root, 
         childList: true
