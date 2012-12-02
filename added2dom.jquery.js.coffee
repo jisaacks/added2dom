@@ -8,7 +8,7 @@ $.fn.extend
   added2dom: (callback, options={}) ->
 
     defaults =
-      root: document.querySelector('body')
+      root: $('body')
       poll: 100
 
     opts = _.extend(defaults, options)
