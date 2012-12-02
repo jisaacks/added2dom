@@ -50,3 +50,5 @@ $.fn.extend
         if matches.length
           setTimeout checkDomForElem, opts.poll
       checkDomForElem()
+
+    @
