@@ -13,6 +13,8 @@ $.fn.extend
 
     opts = _.extend(defaults, options)
 
+    opts.root = $(opts.root).get(0) # strip element from jQuery
+
     matches = @
 
     MutationObserver = window.MutationObserver ? 
