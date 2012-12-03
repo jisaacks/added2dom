@@ -37,3 +37,5 @@ $el.added2dom (->
 
 ### Caveat
 This stops listening once the element is added, so if you plan to add the same element to the dom multiple times you will need to add this each time. I may add support for this if I get requests but I don't currently feel the need to.
+
+[![endorse](http://api.coderwall.com/jisaacks/endorsecount.png)](http://coderwall.com/jisaacks)
