@@ -4,17 +4,25 @@ added2dom is a jquery plugin that executes a callback when the matched elements 
 
 ### Usage:
 ```coffeescript
-$div = $('<div id="add_me">Here I am!</div>')
+$div = $('<div>Here I am!</div>')
 $div.added2dom ->
   # do something dom specific
-$("body").append($div)
+  console.log $div.height()
 
+# the callback will be triggered
+# when the $div is added to the dom
+$("body").append($div)
+```  
+
+```coffeescript
 # It also works with multiple elements
-$div  = $('<div id="add_me">Here I am!</div>')
-$div2 = $('<div id="add_me_too">me too!</div>')
-$div.add($div2).added2dom ->
-  alert "I am now in the DOM!"
-  $(this).css 'color', 'red'
+$div1 = $('<div>One</div>')
+$div2 = $('<div>Two</div>')
+$div1.add($div2).added2dom ->
+  console.log $(this).text()
+
+$("body").append($div1) # output: One
+$("body").append($div2) # output: Two
 ``` 
 
 ### Requirements
