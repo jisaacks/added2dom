@@ -4,10 +4,10 @@ added2dom is a jquery plugin that executes a callback when the matched elements 
 
 ### Usage:
 ```coffeescript
-$div = $('<div>Here I am!</div>')
+$div = $('<div/>')
 $div.added2dom ->
   # do something dom specific
-  console.log $div.height()
+  $div.text $div.height()
 
 # the callback will be triggered
 # when the $div is added to the dom
@@ -24,6 +24,11 @@ $div1.add($div2).added2dom ->
 $("body").append($div1) # output: One
 $("body").append($div2) # output: Two
 ``` 
+
+Thats good to know, I have always done this:
+> git co oldname  
+> git co -b newname  
+> git branch -d oldname  
 
 ### Requirements
  - **[jQuery](http://jquery.com/)** *obviously*
