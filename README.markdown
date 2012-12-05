@@ -23,12 +23,7 @@ $div1.add($div2).added2dom ->
 
 $("body").append($div1) # output: One
 $("body").append($div2) # output: Two
-``` 
-
-Thats good to know, I have always done this:
-> git co oldname  
-> git co -b newname  
-> git branch -d oldname  
+```   
 
 ### Requirements
  - **[jQuery](http://jquery.com/)** *obviously*
