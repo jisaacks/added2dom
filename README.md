@@ -58,7 +58,6 @@ $("body").append($div2);
 ### Requirements
  - **[jQuery](http://jquery.com/)** *obviously*
  - **[underscore.js](http://underscorejs.org/)**
- - **[CoffeeScript](http://coffeescript.org/)** If you don't use CoffeeScript, feel free to [convert](http://js2coffee.org/) this to JavaScript before using it.
 
 ### How it works
 This uses the new [MutationObserver](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#mutation-observers) object to listen for mutations to a specified root node and checks each mutation to see if it was one of the elements we care about being added. If MutationObserver is not supported then it falls back to a polling system that checks the root node to see if it contains any matched elements every iteration.
