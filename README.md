@@ -59,6 +59,10 @@ $("body").append($div2);
  - **[jQuery](http://jquery.com/)** *obviously*
  - **[underscore.js](http://underscorejs.org/)**
 
+### Installation
+ - **JavaScript:** *Use /lib*
+ - **CoffeeScript:** *Use /src*
+
 ### How it works
 This uses the new [MutationObserver](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#mutation-observers) object to listen for mutations to a specified root node and checks each mutation to see if it was one of the elements we care about being added. If MutationObserver is not supported then it falls back to a polling system that checks the root node to see if it contains any matched elements every iteration.
 
