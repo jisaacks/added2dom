@@ -1,0 +1,24 @@
+{
+    "name": "added2dom",
+    "version": "0.0.1",
+    "title": "added2dom",
+    "author": {
+        "name": "JD Isaacks",
+        "url": "https://github.com/jisaacks"
+    },
+    "licenses": [
+        {
+            "url": "https://github.com/jisaacks/added2dom/blob/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.8.3",
+        "underscore": ">=1.4.2"
+    },
+    "description": "Fire a callback when an element is added to the DOM",
+    "keywords": [
+        "added",
+        "dom"
+    ],
+    "homepage": "https://github.com/jisaacks/added2dom"
+}
