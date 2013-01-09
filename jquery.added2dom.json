@@ -20,5 +20,6 @@
         "added",
         "dom"
     ],
-    "homepage": "https://github.com/jisaacks/added2dom"
+    "homepage": "https://github.com/jisaacks/added2dom",
+    "download": "https://raw.github.com/jisaacks/added2dom/master/lib/jquery.added2dom.js"
 }
